@@ -7,6 +7,6 @@ public class StartSeane : MonoBehaviour
 {
     public void OnClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("rule");
     }
 }
