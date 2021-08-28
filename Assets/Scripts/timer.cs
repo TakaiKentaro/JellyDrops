@@ -31,4 +31,8 @@ public class timer : MonoBehaviour
             SceneManager.LoadScene("GameEND");
         }
     }
+    public void addtime()
+    {
+        time += 0.5f;
+    }
 }

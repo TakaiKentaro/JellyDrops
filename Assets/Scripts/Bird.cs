@@ -21,6 +21,8 @@ public class Bird : MonoBehaviour
     private string currentName;
     List<GameObject> removableBirdList = new List<GameObject>();
 
+    [SerializeField] timer Timer;
+
     void Start()
     {
         TouchManager.Began += (info) =>
@@ -85,6 +87,8 @@ public class Bird : MonoBehaviour
                 }
                 // 補充
                 StartCoroutine(DropBirds(removeCount));
+                Timer.addtime();
+
             }
 
             foreach (GameObject obj in removableBirdList)
