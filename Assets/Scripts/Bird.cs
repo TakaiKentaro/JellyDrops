@@ -91,10 +91,13 @@ public class Bird : MonoBehaviour
 
             }
 
-            foreach (GameObject obj in removableBirdList)
-            {
-                ChangeColor(obj, 1.0f);
-            }
+            //foreach (GameObject obj in removableBirdList)
+            //{
+            //    ChangeColor(obj, 1.0f);
+            //}
+
+            removableBirdList.ForEach(obj => Destroy(obj, 1.0f));
+
             removableBirdList = new List<GameObject>();
             firstBird = null;
             lastBird = null;
